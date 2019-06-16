@@ -5,7 +5,6 @@
 %   Twitter:  @zr_tex8r
 % Distributed under the MIT License.
 @require: zexn0
-@require: zrbase0
 
 %=========================================================== module ZRandom0
 module ZRandom0 : sig
