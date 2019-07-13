@@ -45,10 +45,12 @@ document ()
 
 ## 概要
 
+詳細については、各パッケージファイルの冒頭（モジュール定義以前、または、シグネチャ部）のコメントを参照されたい。
+
   * zrbase0： 基本機能
       - 他のパッケージを色々読み込んで、その一部を**グローバルに配置する**。
       - 以下のパッケージを読み込む：  
-        zp0 zl0 zfmt0 zexn0 zlog0 znum0 zresult0
+        zp0 zl0 zfmt0 zexn0 zlist0 zlog0 znum0 zresult0 zs0
       - ZP0、ZL0の大部分の関数と以下の関数（一部は`z-`の接頭辞付）を“open”する。  
           - ZNum0から：fnear
           - ZFmt0から：z-format
@@ -98,19 +100,45 @@ document ()
       - ZResult0 モジュール
           - to-option、of-option、force
   * zrandom0： 擬似乱数
-      - (TBD)
+      - ACORNアルゴリズムによる擬似乱数生成器。
+      - ZRandom0 モジュール
+          - init、bits、int、float、bool、
+            create、bits-with、int-with、float-with、bool-with
   * zmtdoc0： ダミー用の空の文書
-      - (TBD)
-
-## メモ
-
-  - SATySFiの次のリリースが出る時を目途にして、zmtdoc0 以外のパッケージを汎用（`.satyg`）にしたい。
-      - 使用している函数の一部が0.0.3版ではテキストモード非対応である。（HEAD版では大丈夫。）
-  - パッケージ名・モジュール名の後ろの数字は「メジャーバージョン番号」。
+      - 専らログ出力を使うテスト文書を作る際にも何かdocument値を返す必要がある。このパッケージを読み込むと`document()`でdocument値が得られる。
+      - **グローバル定義**
+          - empty-document、document
+  * zlist0： リスト
+      - 標準のlistパッケージにないやつ。
+      - ZList0 モジュール
+          - (TBD)
+  * zs0： 文字列
+      - ZS0 モジュール
+          - (TBD)
 
 ## ライセンス
 
 MITライセンスの下で配布される。
+
+--------------------
+
+## 開発用メモ
+
+  - SATySFiの次のリリースが出る時を目途にして、zmtdoc0 以外のパッケージを汎用（`.satyg`）にしたい。
+      - 使用している函数の一部が0.0.3版ではテキストモード非対応である。（HEAD版では大丈夫。）
+  - パッケージ名・モジュール名の後ろの数字（`0`）は「メジャーバージョン番号」。
+      - 後方互換性を損なうような仕様変更が入ると数字が増える。
+      - 「メジャーバージョン」が異なるものは異なるパッケージ・モジュールなので共存できる。ただし、グローバルに定義を行うもの（zbase0・zresult0・zmtdoc0）は例外。
+
+### パッケージ間の依存関係
+
+各パッケージは、自分より指数が低いパッケージへの依存をもちうる。
+
+    1 : zexn0
+    2 : zresult0
+    3 : zl0, zlist0, znum0, zp0, zs0
+    4 : zfmt0, zlog0, zrandom0
+    9 : zmtdoc0, zrbase0
 
 --------------------
 Takayuki YATO (aka. "ZR")  
