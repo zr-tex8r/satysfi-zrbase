@@ -15,12 +15,18 @@ bug-reports: "https://github.com/zr-tex8r/satysfi-zrbase"
 dev-repo: "git+https://github.com/zr-tex8r/satysfi-zrbase.git"
 depends: [
   "satysfi" {>= "0.0.3" & < "0.0.4"}
-  "satyrographos" {>= "0.0.1" & < "0.0.2"}
+  "satyrographos" {>= "0.0.2" & < "0.0.3"}
 ]
 build: [ ]
 install: [
-  [make "-f" "Makefile" "install" "PREFIX=%{prefix}%"]
+  ["satyrographos" "opam" "install"
+   "-name" "zrbase"
+   "-prefix" "%{prefix}%"
+   "-script" "%{build}%/Satyristes"]
 ]
 remove: [
-  [make "-f" "Makefile" "uninstall" "PREFIX=%{prefix}%"]
+  ["satyrographos" "opam" "uninstall"
+   "-name" "zrbase"
+   "-prefix" "%{prefix}%"
+   "-script" "%{build}%/Satyristes"]
 ]
