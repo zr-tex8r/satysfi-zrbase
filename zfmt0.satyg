@@ -4,10 +4,10 @@
 %   GitHub:   https://github.com/zr-tex8r
 %   Twitter:  @zr_tex8r
 % Distributed under the MIT License.
-@require: zexn0
-@require: zl0
-@require: znum0
-@require: zp0
+@import: zexn0
+@import: zl0
+@import: znum0
+@import: zp0
 
 % let snowman = 9731 in
 % ZFmt0.format (fun f -> [`snowman = 0x`;f#ux snowman])

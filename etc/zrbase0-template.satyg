@@ -1,23 +1,23 @@
-% zrbase0.satyh: ZR basic package
+% zrbase0.satyg: ZR basic package
 %
-% Copyright (c) 2019 Takayuki YATO (aka. "ZR")
+% Copyright (c) 2019-2020 Takayuki YATO (aka. "ZR")
 %   GitHub:   https://github.com/zr-tex8r
 %   Twitter:  @zr_tex8r
 % Distributed under the MIT License.
-@require: zp0
-@require: zl0
-@require: zfmt0
-@require: zexn0
-@require: zlist0
-@require: zlog0
-@require: znum0
-@require: zresult0
-@require: zs0
+@import: zp0
+@import: zl0
+@import: zfmt0
+@import: zexn0
+@import: zlist0
+@import: zlog0
+@import: znum0
+@import: zresult0
+@import: zs0
 
 % This package does the follwoing:
-% - Requires several ZR packages (see the actual @require lines).
+% - Requires several ZR packages (see the actual @import lines).
 % - "Opens" the modules ZP0 and ZL0, with a few exceptions.
-% - Imports some functions from other (required) modules.
+% - Imports some functions from other (imported) modules.
 %    - `fnear` from ZNum0
 %    - `debug` `info`, `warn`, `error` from ZLog0, with prefix `z-`
 %      (i.e. `z-debug`, `z-info`, `z-warn`, `z-error` are availbale).

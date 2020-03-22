@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "satysfi-zrbase"
-version: "0.3.0"
+version: "0.4.0"
 synopsis: "SATySFi Packages for Ordinary Programming"
 description: """
 ZR's SATySFi Package Collection for Ordinary Programming.
@@ -14,7 +14,7 @@ homepage: "https://github.com/zr-tex8r/satysfi-zrbase"
 bug-reports: "https://github.com/zr-tex8r/satysfi-zrbase"
 dev-repo: "git+https://github.com/zr-tex8r/satysfi-zrbase.git"
 depends: [
-  "satysfi" {>= "0.0.3" & < "0.0.5"}
+  "satysfi" {>= "0.0.4" & < "0.0.5"}
   "satyrographos" {>= "0.0.2" & < "0.0.3"}
 ]
 build: [ ]

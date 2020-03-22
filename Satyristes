@@ -1,7 +1,7 @@
 (version "0.0.2")
 (library
   (name "zrbase")
-  (version "0.3.0")
+  (version "0.4.0")
   (sources
     ((package "zexn0.satyg" "zexn0.satyg")
      (package "zfmt0.satyg" "zfmt0.satyg")
