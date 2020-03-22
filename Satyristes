@@ -1,7 +1,7 @@
 (version "0.0.2")
 (library
   (name "zrbase")
-  (version "0.2.1")
+  (version "0.2.2")
   (sources
     ((package "zexn0.satyh" "zexn0.satyh")
      (package "zfmt0.satyh" "zfmt0.satyh")
