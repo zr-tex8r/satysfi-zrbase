@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "satysfi-zrbase"
-version: "0.2.2"
+version: "0.3.0"
 synopsis: "SATySFi Packages for Ordinary Programming"
 description: """
 ZR's SATySFi Package Collection for Ordinary Programming.
